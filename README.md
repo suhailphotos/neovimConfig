@@ -7,7 +7,7 @@ Welcome to my Neovim configuration repository! Here, you'll find all the setting
 To use this configuration, simply clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/suhailphotos/neovim-config.git ~/.config/nvim
+git clone https://github.com/suhailphotos/neovimConfig.git ~/.config/nvim
 ```
 
 Then, start Neovim and enjoy the customized experience!
