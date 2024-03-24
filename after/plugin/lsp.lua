@@ -74,3 +74,4 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] =
         severity_limit = "Error" -- or "Error" for errors only
     })
 
+
