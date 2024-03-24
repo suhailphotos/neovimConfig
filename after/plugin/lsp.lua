@@ -60,3 +60,17 @@ vim.diagnostic.config({
     virtual_text = true
 })
 
+vim.lsp.handlers["textDocument/publishDiagnostics"] =
+    vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+        -- Disable underline, it's very annoying
+        underline = false,
+        -- Enable virtual text, override spacing to 4
+        virtual_text = {spacing = 4},
+        -- Enable signs for diagnostics
+        signs = true,
+        -- Disable updating in insert mode
+        update_in_insert = false,
+        -- Configure severity levels to display
+        severity_limit = "Error" -- or "Error" for errors only
+    })
+
