@@ -74,4 +74,22 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] =
         severity_limit = "Error" -- or "Error" for errors only
     })
 
-
+require('lspconfig').pylsp.setup{
+    on_attach = on_attach,
+    settings = {
+        pylsp = {
+            plugins = {
+                ruff = {
+                    enabled = true,
+                    extendSelect = { "I" },
+                    lineLength = 88,
+                },
+                flake8 = { enabled = false },
+                mccabe = { enabled = false },
+                pycodestyle = { enabled = false },
+                pyflakes = { enabled = false },
+                yapf = { enabled = false },
+            },
+        }
+    }
+}
